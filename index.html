@@ -285,6 +285,195 @@
       .visual-card { min-height: 320px; }
       section { padding: 56px 0; }
     }
+    .hero-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.hero-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-height: 56px;
+  padding: 0 28px;
+  border-radius: 16px;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.measure-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: #0f172a;
+}
+
+.measure-box {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 28px;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.measure-label {
+  color: #4ade80;
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.measure-box h2 {
+  font-size: 34px;
+  line-height: 1.3;
+  margin-bottom: 18px;
+}
+
+.measure-desc {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d1d5db;
+  margin-bottom: 30px;
+}
+
+.measure-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.measure-card {
+  background: #1f2937;
+  border-radius: 22px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.measure-card strong {
+  display: block;
+  color: #4ade80;
+  margin-bottom: 12px;
+  font-size: 17px;
+}
+
+.measure-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.measure-card p {
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+.example-box {
+  background: #facc15;
+  color: #111827;
+  border-radius: 22px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.example-box h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.example-box p {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.measure-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.measure-info {
+  background: #1f2937;
+  border-radius: 22px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.measure-info h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.measure-info p,
+.measure-info li {
+  color: #d1d5db;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.measure-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dark-example {
+  margin-top: 16px;
+  background: #020617;
+  color: #e5e7eb;
+  padding: 18px;
+  border-radius: 16px;
+  line-height: 1.8;
+}
+
+body, p, h1, h2, h3, li {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 110px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    min-height: 52px;
+  }
+
+  .measure-section {
+    padding: 50px 16px 130px;
+  }
+
+  .measure-box {
+    padding: 26px 18px;
+    border-radius: 22px;
+  }
+
+  .measure-box h2 {
+    font-size: 26px;
+  }
+
+  .measure-desc {
+    font-size: 16px;
+  }
+
+  .measure-cards,
+  .measure-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
   body, p, h1, h2, h3, li {
   word-break: keep-all;
@@ -306,22 +495,89 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="badge">체육관 타포린 바닥 전문 관리</div>
-          <h1>고질적인 체육관 냄새와<br />찌든 때를 바닥부터 관리합니다.</h1>
-          <p>태권도, 합기도, 킥복싱, 무에타이, 줄넘기 체육관처럼 땀과 먼지가 많은 공간을 위한 정글 클리닝 서비스입니다. 타포린 바닥 특성에 맞춘 장비와 세정 방식으로 안전하고 깔끔하게 관리합니다.</p>
-          <div class="hero-actions">
-              <a href="tel:050713183327" class="btn primary">전화 상담하기</a>
-  <a href="sms:050713183327" class="btn secondary">문자로 견적 문의</a>
-</div>
-            </section>
-  <div class="max-w-5xl mx-auto rounded-3xl bg-slate-900 border border-slate-700 p-6 md:p-10 text-white">
-    <p class="text-green-400 font-bold text-sm mb-3">견적 전 확인</p>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      상단 문구
 
-    <h2 class="text-3xl md:text-4xl font-extrabold mb-5 leading-tight">
-      우리 체육관 청소 면적은 어떻게 재나요?
+      <div class="hero-actions">
+        전화 상담하기 버튼
+        문자로 견적 문의 버튼
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="measure-section">
+  우리 체육관 청소 면적은 어떻게 재나요?
+</section>
+    <p class="measure-desc">
+      정확한 견적을 위해 타포린 바닥의 가로와 세로 길이를 재주세요.
+      바닥 전체 사진과 오염 부위 사진을 함께 보내주시면 더 빠르고 정확하게 안내해드립니다.
+    </p>
+
+    <div class="measure-cards">
+      <div class="measure-card">
+        <strong>STEP 01</strong>
+        <h3>가로·세로 측정</h3>
+        <p>줄자로 타포린 바닥의 가로 길이와 세로 길이를 재주세요.</p>
+      </div>
+
+      <div class="measure-card">
+        <strong>STEP 02</strong>
+        <h3>면적 계산</h3>
+        <p>
+          가로(m) × 세로(m) = 면적(㎡)<br>
+          면적(㎡) ÷ 3.3 = 평수
+        </p>
+      </div>
+
+      <div class="measure-card">
+        <strong>STEP 03</strong>
+        <h3>사진 전송</h3>
+        <p>바닥 전체 사진과 오염이 심한 부분 사진을 함께 보내주세요.</p>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <h3>계산 예시</h3>
+      <p>
+        가로 10m × 세로 8m = 80㎡<br>
+        80㎡ ÷ 3.3 = 약 24평
+      </p>
+    </div>
+
+    <div class="measure-info-grid">
+      <div class="measure-info">
+        <h3>견적 문의 시 아래 내용을 보내주세요</h3>
+        <ul>
+          <li>1. 체육관 이름</li>
+          <li>2. 지역</li>
+          <li>3. 타포린 바닥 가로 길이</li>
+          <li>4. 타포린 바닥 세로 길이</li>
+          <li>5. 바닥 전체 사진 2~3장</li>
+          <li>6. 오염이 심한 부분 사진</li>
+          <li>7. 냄새, 찌든 때, 미끄러움 등 현재 고민되는 문제</li>
+        </ul>
+      </div>
+
+      <div class="measure-info">
+        <h3>바닥 모양이 복잡한 경우</h3>
+        <p>
+          바닥이 ㄱ자, ㄷ자 형태이거나 기둥, 링, 매트 구역 때문에 반듯하지 않은 경우에는
+          공간을 여러 개의 사각형으로 나누어 재주세요.
+        </p>
+
+        <div class="dark-example">
+          A구역: 6m × 5m = 30㎡<br>
+          B구역: 4m × 3m = 12㎡<br>
+          총면적: 30㎡ + 12㎡ = 42㎡<br>
+          42㎡ ÷ 3.3 = 약 13평
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     </h2>
 
     <p class="text-slate-200 text-lg leading-8 mb-8">
