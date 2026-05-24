@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>정글 클리닝 | 체육관 타포린 바닥 전문 청소</title>
   <meta name="description" content="태권도, 합기도, 격투기, 줄넘기 체육관 타포린 바닥 정글 클리닝. 고질적인 체육관 냄새와 찌든 때를 전문 장비로 관리합니다." />
+
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+
   <style>
     * { box-sizing: border-box; }
     body {
@@ -274,7 +277,7 @@
     .cta h2 { margin: 0 0 12px; font-size: clamp(30px, 4vw, 48px); letter-spacing: -0.05em; }
     .cta p { margin: 0 0 24px; color: #e5e7eb; font-size: 18px; }
     footer { padding: 36px 0; color: #6b7280; font-size: 14px; }
-    @media (max-width: 860px) {
+    @media (max-width: 860px)
       .nav-links { display: none; }
       .hero {
     background-position: 70% center;
@@ -485,10 +488,62 @@ body, p, h1, h2, h3, li {
   gap: 12px;
   clear: both;
 }
-<style>
-  기존 디자인 코드들...
-</style>    
- </style>
+/* 상단 메인 문구 디자인 */
+/* 상단 메인 문구 디자인 */
+.hero .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 24px;
+  border-radius: 999px;
+  background: #d8f8e8;
+  color: #064e3b;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 24px rgba(6, 78, 59, 0.08);
+}
+
+.hero .hero-title {
+  margin: 0 0 30px;
+  max-width: 900px;
+  font-size: clamp(38px, 4.8vw, 60px);
+  line-height: 1.22;
+  font-weight: 950;
+  letter-spacing: -0.065em;
+  color: #07172f;
+}
+
+.hero .hero-desc {
+  margin: 0 0 34px;
+  max-width: 930px;
+  font-size: 24px;
+  line-height: 1.72;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: #26384f;
+}
+
+@media (max-width: 768px) {
+  .hero .hero-badge {
+    font-size: 15px;
+    padding: 10px 18px;
+    margin-bottom: 22px;
+  }
+
+  .hero .hero-title {
+    font-size: 31px;
+    line-height: 1.34;
+    margin-bottom: 22px;
+  }
+
+  .hero .hero-desc {
+    font-size: 18px;
+    line-height: 1.65;
+    max-width: 100%;
+  }
+}
+</style>
 </head>
 <body>
   <header>
@@ -508,16 +563,19 @@ body, p, h1, h2, h3, li {
 <section class="hero">
   <div class="wrap hero-grid">
 <div>
-  <div class="badge">체육관 타포린 바닥 전문 관리</div>
+  <div class="badge hero-badge">체육관 타포린 바닥 전문 관리</div>
+  
+<h1 class="hero-title">
+  땀 냄새와 운동으로 생긴 바닥 오염<br />
+  체육관 바닥 전문 케어
+</h1>
 
- <h2>땀 냄새와 운동으로 생긴 바닥 오염<br />체육관 바닥 전문 케어</h2>
-
-  <p>
-  태권도, 합기도, 킥복싱, 무에타이, 줄넘기 체육관처럼
-  매일 운동하는 공간은 땀 냄새, 미끄러움, 바닥 자국이 쉽게 쌓입니다.
-  정글 클리닝은 타포린 바닥 특성에 맞춘 고압세척 습식 장비로
+<p class="hero-desc">
+  태권도장, 합기도장, 격투기, 줄넘기 체육관처럼
+  매일 운동하는 공간은 바닥 오염과 냄새가 쉽게 쌓입니다.
+  정글 클리닝은 타포린 바닥 특성에 맞춘  고압세척 습식 장비와 전문 관리 방식으로
   찌든 때와 냄새까지 깔끔하게 관리합니다.
-  </p>
+</p>
 
 <div class="hero-actions">
           <a href="tel:050713183327" class="btn primary">전화 상담하기</a>
@@ -800,6 +858,14 @@ body, p, h1, h2, h3, li {
   </footer>
   </footer>
 
+  <footer>
+    <div class="wrap">
+    정글 클리닝 · 체육관 타포린 바닥 전문 청소<br />
+    문의: 0507-1318-3327 · 사업자등록번호: 123-37-71288<br />
+    주소: 경기도 안양시 만안구 안양동 533-16 미랜드명학타워 2층 201호
+    </div>
+  </footer>
+
 <script>
   const floorWidth = document.getElementById('floorWidth');
   const floorHeight = document.getElementById('floorHeight');
@@ -821,7 +887,5 @@ body, p, h1, h2, h3, li {
   floorHeight.addEventListener('input', calculateFloorSize);
 </script>
 
-</body>
-</html>
 </body>
 </html>
