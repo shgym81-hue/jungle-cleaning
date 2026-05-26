@@ -277,7 +277,7 @@
     .cta h2 { margin: 0 0 12px; font-size: clamp(30px, 4vw, 48px); letter-spacing: -0.05em; }
     .cta p { margin: 0 0 24px; color: #e5e7eb; font-size: 18px; }
     footer { padding: 36px 0; color: #6b7280; font-size: 14px; }
-    @media (max-width: 860px)
+    @media (max-width: 860px) {
       .nav-links { display: none; }
       .hero {
     background-position: 70% center;
@@ -545,214 +545,222 @@ body, p, h1, h2, h3, li {
 }
 /* ===============================
    견적 확인 섹션 전체 축소 수정
+/* ===============================
+   평수 계산 / 견적 확인 영역 compact 수정
+   실제 코드명 기준: measure-section
    =============================== */
 
-/* 전체 견적 박스 크기 축소 */
-#estimate,
-.estimate,
-.estimate-section,
-.quote-section {
-  max-width: 1060px !important;
-  padding: 34px 34px !important;
-  margin: 50px auto !important;
+/* 전체 섹션 위아래 공간 줄이기 */
+.measure-section {
+  padding: 42px 16px !important;
+}
+
+/* 큰 어두운 박스 크기 축소 */
+.measure-box {
+  max-width: 960px !important;
+  padding: 28px 26px !important;
   border-radius: 22px !important;
 }
 
-/* 작은 초록 라벨 */
-#estimate .eyebrow,
-.estimate .eyebrow,
-.estimate-section .eyebrow,
-.quote-section .eyebrow {
+/* 초록 작은 제목 */
+.measure-label {
   font-size: 13px !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 8px !important;
 }
 
-/* 큰 제목 */
-#estimate h2,
-.estimate h2,
-.estimate-section h2,
-.quote-section h2 {
-  font-size: 30px !important;
-  line-height: 1.35 !important;
-  margin-bottom: 14px !important;
+/* 메인 제목 */
+.measure-box h2 {
+  font-size: 26px !important;
+  line-height: 1.3 !important;
+  margin: 0 0 12px !important;
 }
 
-/* 설명 문구 */
-#estimate p,
-.estimate p,
-.estimate-section p,
-.quote-section p {
+/* 설명 문장 */
+.measure-desc {
   font-size: 14px !important;
   line-height: 1.55 !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 18px !important;
 }
 
-/* 입력창 줄 높이 줄이기 */
-#estimate input,
-.estimate input,
-.estimate-section input,
-.quote-section input {
+/* 자동 계산 영역 전체 */
+.floor-calculator {
+  margin: 14px 0 18px !important;
+}
+
+/* 자동 계산 제목 */
+.floor-calculator h3 {
+  font-size: 17px !important;
+  margin: 0 0 8px !important;
+}
+
+/* 자동 계산 설명 */
+.calculator-guide,
+.calculator-note {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  margin: 6px 0 !important;
+}
+
+/* 입력창 영역 */
+.calculator-inputs {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin: 8px 0 !important;
+}
+
+.calculator-inputs label {
+  font-size: 13px !important;
+}
+
+.calculator-inputs input {
   height: 26px !important;
-  padding: 3px 8px !important;
+  width: 110px !important;
+  padding: 3px 6px !important;
   font-size: 13px !important;
 }
 
-/* 입력창 주변 여백 축소 */
-#estimate label,
-.estimate label,
-.estimate-section label,
-.quote-section label {
-  font-size: 13px !important;
-  margin-bottom: 4px !important;
-}
-
-/* STEP 카드 3개 전체 간격 축소 */
-.step-grid,
-.steps,
-.process-grid {
+/* 계산 결과 글씨 */
+.calculator-result {
   gap: 14px !important;
-  margin-top: 18px !important;
-  margin-bottom: 16px !important;
+  margin: 8px 0 !important;
 }
 
-/* STEP 카드 박스 축소 */
-.step-card,
-.process-card,
-.card {
-  padding: 18px 18px !important;
-  min-height: 120px !important;
-  border-radius: 16px !important;
+.calculator-result strong {
+  font-size: 18px !important;
 }
 
-/* STEP 01 글자 */
-.step-card small,
-.process-card small,
-.card small {
+.calculator-result span {
   font-size: 12px !important;
 }
 
-/* STEP 카드 제목 */
-.step-card h3,
-.process-card h3,
-.card h3 {
-  font-size: 17px !important;
-  line-height: 1.35 !important;
-  margin: 8px 0 8px !important;
+/* STEP 카드 3개 영역 */
+.measure-cards {
+  gap: 12px !important;
+  margin-bottom: 16px !important;
 }
 
-/* STEP 카드 설명 */
-.step-card p,
-.process-card p,
-.card p {
-  font-size: 13px !important;
-  line-height: 1.5 !important;
-  margin: 0 !important;
-}
-
-/* 노란 계산 예시 박스 축소 */
-.example-box,
-.calc-example,
-.yellow-box {
-  padding: 22px 26px !important;
-  margin: 18px 0 !important;
-  border-radius: 18px !important;
-}
-
-/* 노란 박스 제목 */
-.example-box h3,
-.calc-example h3,
-.yellow-box h3 {
-  font-size: 17px !important;
-  margin-bottom: 12px !important;
-}
-
-/* 노란 박스 내용 */
-.example-box p,
-.calc-example p,
-.yellow-box p {
-  font-size: 14px !important;
-  line-height: 1.55 !important;
-  margin-bottom: 6px !important;
-}
-
-/* 하단 2개 박스 간격 축소 */
-.info-grid,
-.notice-grid,
-.bottom-grid {
-  gap: 16px !important;
-  margin-top: 16px !important;
-}
-
-/* 하단 안내 박스 축소 */
-.info-card,
-.notice-card,
-.bottom-card {
-  padding: 20px 20px !important;
+/* STEP 카드 박스 */
+.measure-card {
+  padding: 16px 16px !important;
   border-radius: 16px !important;
   min-height: auto !important;
 }
 
-/* 하단 안내 박스 제목 */
-.info-card h3,
-.notice-card h3,
-.bottom-card h3 {
-  font-size: 17px !important;
-  margin-bottom: 12px !important;
+/* STEP 01 글자 */
+.measure-card strong {
+  font-size: 12px !important;
+  margin-bottom: 8px !important;
 }
 
-/* 하단 안내 박스 내용 */
-.info-card p,
-.info-card li,
-.notice-card p,
-.notice-card li,
-.bottom-card p,
-.bottom-card li {
+/* STEP 카드 제목 */
+.measure-card h3 {
+  font-size: 17px !important;
+  margin: 0 0 7px !important;
+}
+
+/* STEP 카드 설명 */
+.measure-card p {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  margin: 0 !important;
+}
+
+/* 노란 계산 예시 박스 */
+.example-box {
+  padding: 18px 20px !important;
+  margin-bottom: 16px !important;
+  border-radius: 16px !important;
+}
+
+.example-box h3 {
+  font-size: 18px !important;
+  margin: 0 0 8px !important;
+}
+
+.example-box p {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+/* 하단 2개 안내 박스 */
+.measure-info-grid {
+  gap: 12px !important;
+}
+
+/* 하단 안내 박스 */
+.measure-info {
+  padding: 18px 18px !important;
+  border-radius: 16px !important;
+}
+
+.measure-info h3 {
+  font-size: 18px !important;
+  margin: 0 0 10px !important;
+}
+
+.measure-info p,
+.measure-info li {
   font-size: 13px !important;
   line-height: 1.55 !important;
 }
 
-/* 모바일에서는 더 자연스럽게 */
+/* 검은 예시 박스 */
+.dark-example {
+  padding: 14px !important;
+  margin-top: 10px !important;
+  border-radius: 12px !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+}
+
+/* 모바일 최적화 */
 @media (max-width: 768px) {
-  #estimate,
-  .estimate,
-  .estimate-section,
-  .quote-section {
-    padding: 26px 20px !important;
-    margin: 34px 14px !important;
+  .measure-section {
+    padding: 32px 12px 70px !important;
   }
 
-  #estimate h2,
-  .estimate h2,
-  .estimate-section h2,
-  .quote-section h2 {
-    font-size: 24px !important;
+  .measure-box {
+    padding: 20px 14px !important;
+    border-radius: 18px !important;
   }
 
-  .step-grid,
-  .steps,
-  .process-grid,
-  .info-grid,
-  .notice-grid,
-  .bottom-grid {
+  .measure-box h2 {
+    font-size: 22px !important;
+    line-height: 1.32 !important;
+  }
+
+  .measure-desc {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .calculator-inputs {
+    gap: 8px !important;
+  }
+
+  .calculator-inputs input {
+    width: 90px !important;
+    height: 24px !important;
+  }
+
+  .measure-cards,
+  .measure-info-grid {
     grid-template-columns: 1fr !important;
-    gap: 12px !important;
+    gap: 10px !important;
   }
 
-  .step-card,
-  .process-card,
-  .card,
-  .info-card,
-  .notice-card,
-  .bottom-card {
-    padding: 16px 16px !important;
+  .measure-card,
+  .measure-info {
+    padding: 14px 14px !important;
   }
 
-  .example-box,
-  .calc-example,
-  .yellow-box {
-    padding: 18px 18px !important;
+  .example-box {
+    padding: 15px 15px !important;
   }
-}    
+}
 </style>
 </head>
 <body>
@@ -1065,7 +1073,6 @@ body, p, h1, h2, h3, li {
     문의: 0507-1318-3327 · 사업자등록번호: 123-37-71288<br />
     주소: 경기도 안양시 만안구 안양동 533-16 미랜드명학타워 2층 201호
     </div>
-  </footer>
   </footer>
 
 <script>
